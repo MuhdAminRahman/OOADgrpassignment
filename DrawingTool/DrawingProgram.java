@@ -24,12 +24,12 @@ public class DrawingProgram extends JFrame {
         this.add(toolbar, BorderLayout.SOUTH);
 
         try {
-            freehandImage = ImageIO.read(getClass().getResource("icons/freehand.png"));
-            lineImage = ImageIO.read(getClass().getResource("icons/line.png"));
-            rectangleImage = ImageIO.read(getClass().getResource("icons/rectangle.png"));
-            circleImage = ImageIO.read(getClass().getResource("icons/circle.png"));
-            ovalImage = ImageIO.read(getClass().getResource("icons/oval.png"));
-            triangleImage = ImageIO.read(getClass().getResource("icons/triangle.png"));
+            freehandImage = ImageIO.read(getClass().getResource("icons/freehand.png")).getScaledInstance(10, 10, java.awt.Image.SCALE_SMOOTH);
+            lineImage = ImageIO.read(getClass().getResource("icons/line.png")).getScaledInstance(10, 10, java.awt.Image.SCALE_SMOOTH);
+            rectangleImage = ImageIO.read(getClass().getResource("icons/rectangle.png")).getScaledInstance(10, 10, java.awt.Image.SCALE_SMOOTH);
+            circleImage = ImageIO.read(getClass().getResource("icons/circle.png")).getScaledInstance(10, 10, java.awt.Image.SCALE_SMOOTH);
+            ovalImage = ImageIO.read(getClass().getResource("icons/oval.png")).getScaledInstance(10, 10, java.awt.Image.SCALE_SMOOTH);
+            triangleImage = ImageIO.read(getClass().getResource("icons/triangle.png")).getScaledInstance(10, 10, java.awt.Image.SCALE_SMOOTH);
         } catch (Exception e) {
             System.out.println(e);
 
@@ -47,7 +47,7 @@ public class DrawingProgram extends JFrame {
 
         this.add(drawingPanel, BorderLayout.CENTER);
 
-        setSize(850, 600);
+        setSize(900, 600);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
